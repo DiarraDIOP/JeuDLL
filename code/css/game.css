@@ -1,0 +1,16 @@
+#myCanvas {
+	border: 2px solid black;
+	background-position: center center;
+	background-repeat: no-repeat; 
+	background-attachment: fixed; 
+	background-size: cover;
+	background-image: url(../img/fond1.jpg);
+	display: block;
+	margin: auto;
+}
+#rules {
+	background-size: fluid;
+	border: 2px solid black;
+	background-position: left;
+}
+
