@@ -1,3 +1,5 @@
+//by BACHARA - DIOP
+
 // constructor function for exit
     function Princesse(y) {
         this.y = y;

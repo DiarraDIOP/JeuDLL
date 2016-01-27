@@ -1,3 +1,5 @@
+//by BACHARA - DIOP
+
 var delta, oldTime = 0;
 
 function timer(currentTime) {

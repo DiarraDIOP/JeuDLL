@@ -1,3 +1,5 @@
+//by BACHARA - DIOP
+
 // constructor function for balls
     function Ball(x, y, angle, v, diameter) {
         this.x = x;

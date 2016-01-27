@@ -1,3 +1,5 @@
+//by BACHARA - DIOP
+
 //constructeur des points de vie (des Princes)
 
 function Point(x, y, angle, v, diameter) {

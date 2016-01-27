@@ -1,3 +1,5 @@
+//by BACHARA - DIOP
+
 function addListeners(inputStates, canvas) {
 	    //add the listener to the main, window object, and update the states
         window.addEventListener('keydown', function (event) {

@@ -1,3 +1,5 @@
+//by BACHARA - DIOP
+
 
 	function createBalls(nbBalls, ballArray, prince2, prince, canvas){		
 		for (var i = 0; i < nbBalls; i++) {
@@ -274,3 +276,5 @@ function Level(x, exit, obstacles, ballArray,points, canvas, prince2,prince){
 
 
 }
+
+

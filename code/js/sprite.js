@@ -1,3 +1,5 @@
+//by BACHARA - DIOP
+
 function SpriteImage(img, x, y, width, height) {
    this.img = img;  // the whole image that contains all sprites
    this.x = x;      // x, y position of the sprite image in the whole image

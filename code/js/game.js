@@ -1,3 +1,5 @@
+//by BACHARA - DIOP
+
 // Inits
 window.onload = function init() {
     var game = new GF();

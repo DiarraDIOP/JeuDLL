@@ -1,3 +1,5 @@
+//by BACHARA - DIOP
+
 // constructor function for obstacles
 //https://openclassrooms.com/courses/dynamisez-vos-sites-web-avec-javascript/l-element-canvas
 

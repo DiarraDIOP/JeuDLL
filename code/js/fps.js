@@ -1,3 +1,5 @@
+//by BACHARA - DIOP
+
      // vars for counting frames/s, used by the measureFPS function
     var frameCount = 0;
     var lastTime;
