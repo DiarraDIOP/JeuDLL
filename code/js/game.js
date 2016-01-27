@@ -7,7 +7,7 @@ window.onload = function init() {
 // GAME FRAMEWORK STARTS HERE
 var GF = function () {
     // Vars relative to the canvas
-    var canvas, ctx, w, h;
+    var canvas, canvasscore, ctx, w, h;
 	
     // vars for handling inputs
     var inputStates = {};
@@ -60,7 +60,7 @@ var GF = function () {
       dead:false,
       x:10,
       y:50,
-      width:30,
+      width:35,
       height:45,
       speed:150, // pixels/s this time !
       changeLevel:false,
@@ -329,8 +329,7 @@ var song2 = new Howl({
                     ctx.fillText("Press SPACE to start again", 100, 200);
                     ctx.fillText("Move with arrow keys for J1 and A=Up Z=Down Q=Right S=left for J2", 100, 250);
                     ctx.fillText("Go faster", 100, 300);
-                    ctx.font = "20px fantasy";
-                
+                    ctx.font = "20px fantasy";                
                 
                 if (inputStates.space) {
                     prince.dead=false;
@@ -388,7 +387,7 @@ var song2 = new Howl({
                 ctx.font = "20px fantasy";
                 ctx.fillText("Press ENTER to continue ", 100, 150);
                 ctx.fillText(" Or press SPACE to start again ", 100, 200);
-                ctx.fillText("Move with arrow keys for J1 and A=Up Z=Down Q=Right S=left for J2", 100, 250);
+                ctx.fillText("Move with arrow keys for player J1 and A=Left Z=Up E=Right S=Down for player J2", 100, 250);
                 
                 if (inputStates.space) {
                     startNewGame();
@@ -584,16 +583,20 @@ var song2 = new Howl({
      
     }
 
-    function displayScore() {
-        ctx.save();
-        ctx.fillStyle = 'black';
-        ctx.fillText("Level: " + currentLevel, 700, 30);
-        ctx.fillText("Time: " + (currentLevelTime / 1000).toFixed(1), 700, 60); 
-        ctx.fillText("scoreJ1: " + scoreJ1, 700, 90);  
+    function displayScore() {        
+        canvasscore = document.querySelector("#score");
+        var context = canvasscore.getContext('2d');
+        context.clearRect(0, 0, w, h);
+        context.font = "20px fantasy";
+        context.save();
+        context.fillStyle = 'black';
+        context.fillText("Level: " + currentLevel, 100, 20);
+        context.fillText("Time: " + (currentLevelTime / 1000).toFixed(1), 250, 20); 
+        context.fillText("scoreJ1: " + scoreJ1, 400, 20);  
         if(nbJoueur==2)
-            ctx.fillText("scoreJ2: " + scoreJ2, 700, 120); 
+            context.fillText("scoreJ2: " + scoreJ2, 600, 20); 
 
-        ctx.restore();
+        context.restore();
     }
 	   
 	
